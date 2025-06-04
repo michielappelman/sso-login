@@ -1,0 +1,19 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "sso-login",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-05-19",
+	"compatibility_flags": ["nodejs_compat"],
+	"observability": {
+		"enabled": true,
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "workers-sso-auto-login",
+			"database_id": "86f23b09-ca2f-4c81-b287-7be22478f0d8",
+		},
+	],
+	"vars": { "ADMIN_HOSTNAME": "app-admin.example.com" },
+	"workers_dev": false,
+}

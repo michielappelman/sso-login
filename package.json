@@ -1,0 +1,24 @@
+{
+	"name": "sso-login",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"deploy": "npm run db:migrations:apply && wrangler deploy",
+    "db:migrations:apply": "wrangler d1 migrations apply DB --remote",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"test": "vitest",
+		"cf-typegen": "wrangler types"
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "^0.8.19",
+		"drizzle-kit": "^0.31.1",
+		"typescript": "^5.5.2",
+		"vitest": "~3.0.7",
+		"wrangler": "^4.15.2"
+	},
+	"dependencies": {
+		"drizzle-orm": "^0.43.1",
+		"hono": "^4.7.10"
+	}
+}
